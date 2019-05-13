@@ -51,6 +51,8 @@ middleImg.setAttribute('src', 'img/mid-page-accent.jpg');
 
 //**********Content***********//
 //Header & CTA
+
+
 const navItems = document.querySelectorAll('header > nav > a')
 navItems[0].innerText = 'Services';
 navItems[1].innerText = 'Product';
@@ -66,21 +68,18 @@ navItems.forEach( element => {
 const navEle = document.querySelector('header > nav')
 const navAHome = document.createElement('a');
 navAHome.textContent = 'Home';
-navAHome.style.color = 'green';
-navAHome.setAttribute("src", "index.html");
+//navAHome.style.color = 'green';
+navAHome.setAttribute("href", "index.html");
 
 navEle.prepend(navAHome);
 
 const navALogIn = document.createElement('a');
 navALogIn.textContent = 'Log In';
-navALogIn.style.color = 'green';
-navALogIn.setAttribute("src", "\"#\"");
+//navALogIn.style.color = 'green';
+navALogIn.setAttribute("href", "\"#\"");
 
 navEle.appendChild(navALogIn);
 
-
-
-//$("nav").appendChild('<a href=\"#\">Home</a>');
 
 const title = document.querySelectorAll('.cta > .cta-text > h1')
 title[0].innerText = 'DOM \n is \n Awesome';
@@ -90,7 +89,7 @@ headerButton[0].innerText = 'Get Started';
 
 //Main-content
 const topContentH4 = document.querySelectorAll('.top-content > .text-content > h4');
-topContentH4[0].innerText = 'Features';
+topContentH4[0].innerHTML = '<h1>Features</h1>';
 topContentH4[1].innerText = 'About';
 
 const topContentP = document.querySelectorAll('.top-content > .text-content > p')
