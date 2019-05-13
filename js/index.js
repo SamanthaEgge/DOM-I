@@ -59,8 +59,31 @@ navItems[3].innerText = 'Features';
 navItems[4].innerText = 'About';
 navItems[5].innerText = 'Contact';
 
+navItems.forEach( element => {
+  element.style.color = 'green';
+})
+
+const navEle = document.querySelector('header > nav')
+const navAHome = document.createElement('a');
+navAHome.textContent = 'Home';
+navAHome.style.color = 'green';
+navAHome.setAttribute("src", "index.html");
+
+navEle.prepend(navAHome);
+
+const navALogIn = document.createElement('a');
+navALogIn.textContent = 'Log In';
+navALogIn.style.color = 'green';
+navALogIn.setAttribute("src", "\"#\"");
+
+navEle.appendChild(navALogIn);
+
+
+
+//$("nav").appendChild('<a href=\"#\">Home</a>');
+
 const title = document.querySelectorAll('.cta > .cta-text > h1')
-title[0].innerText = 'DOM \n is \n Awesome'
+title[0].innerText = 'DOM \n is \n Awesome';
 
 const headerButton = document.querySelectorAll('.cta > .cta-text > button')
 headerButton[0].innerText = 'Get Started';
