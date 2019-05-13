@@ -38,5 +38,60 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+//Images
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let codeSnippImg = document.getElementById("cta-img");
+codeSnippImg.setAttribute('src', 'img/header-img.png')
+
+let middleImg = document.getElementById('middle-img');
+middleImg.setAttribute('src', 'img/mid-page-accent.jpg');
+
+//**********Content***********//
+//Header & CTA
+const navItems = document.querySelectorAll('header > nav > a')
+navItems[0].innerText = 'Services';
+navItems[1].innerText = 'Product';
+navItems[2].innerText = 'Vision';
+navItems[3].innerText = 'Features';
+navItems[4].innerText = 'About';
+navItems[5].innerText = 'Contact';
+
+const title = document.querySelectorAll('.cta > .cta-text > h1')
+title[0].innerText = 'DOM \n is \n Awesome'
+
+const headerButton = document.querySelectorAll('.cta > .cta-text > button')
+headerButton[0].innerText = 'Get Started';
+
+//Main-content
+const topContentH4 = document.querySelectorAll('.top-content > .text-content > h4');
+topContentH4[0].innerText = 'Features';
+topContentH4[1].innerText = 'About';
+
+const topContentP = document.querySelectorAll('.top-content > .text-content > p')
+topContentP[0].innerText = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+topContentP[1].innerText = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+const bottomContentH4 = document.querySelectorAll('.bottom-content > .text-content > h4');
+bottomContentH4[0].innerText = 'Services';
+bottomContentH4[1].innerText = 'Product';
+bottomContentH4[2].innerText = 'Vision';
+
+const bottomContentP = document.querySelectorAll('.bottom-content > .text-content > p')
+bottomContentP[0].innerText = 'Services content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+bottomContentP[1].innerText = 'Product content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+bottomContentP[2].innerText = 'Vision content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+
+//Footer
+const contactH4 = document.querySelectorAll('.contact > h4')
+contactH4[0].innerText = 'Contact';
+
+const contactP = document.querySelectorAll('.contact > p')
+contactP[0].innerText = '123 Way 456 Street \n Somewhere, USA';
+contactP[1].innerText = '1 (888) 888-8888';
+contactP[2].innerText = 'sales@greatidea.io';
+
+const footerP = document.querySelectorAll('footer > p')
+footerP[0].innerText = 'Copyright Great Idea! 2018';
