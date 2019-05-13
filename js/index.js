@@ -54,50 +54,51 @@ middleImg.setAttribute('src', 'img/mid-page-accent.jpg');
 
 
 const navItems = document.querySelectorAll('header > nav > a')
-navItems[0].innerText = 'Services';
-navItems[1].innerText = 'Product';
-navItems[2].innerText = 'Vision';
-navItems[3].innerText = 'Features';
-navItems[4].innerText = 'About';
-navItems[5].innerText = 'Contact';
+navItems[0].textContent = 'Services';
+navItems[1].textContent = 'Product';
+navItems[2].textContent = 'Vision';
+navItems[3].textContent = 'Features';
+navItems[4].textContent = 'About';
+navItems[5].textContent = 'Contact';
 
 navItems.forEach( element => {
   element.style.color = 'green';
 })
 
 const navEle = document.querySelector('header > nav')
+
 const navAHome = document.createElement('a');
 navAHome.textContent = 'Home';
-//navAHome.style.color = 'green';
+navAHome.style.color = 'green';
 navAHome.setAttribute("href", "index.html");
 
 navEle.prepend(navAHome);
 
 const navALogIn = document.createElement('a');
 navALogIn.textContent = 'Log In';
-//navALogIn.style.color = 'green';
+navALogIn.style.color = 'green';
 navALogIn.setAttribute("href", "\"#\"");
 
 navEle.appendChild(navALogIn);
 
 
 const title = document.querySelectorAll('.cta > .cta-text > h1')
-title[0].innerText = 'DOM \n is \n Awesome';
+title[0].textContent = 'DOM \n is \n Awesome';
 
 const headerButton = document.querySelectorAll('.cta > .cta-text > button')
-headerButton[0].innerText = 'Get Started';
+headerButton[0].textContent = 'Get Started';
 
 //Main-content
 const topContentH4 = document.querySelectorAll('.top-content > .text-content > h4');
-topContentH4[0].innerHTML = '<h1>Features</h1>';
-topContentH4[1].innerText = 'About';
+topContentH4[0].textContent = '<h1>Features</h1>';
+topContentH4[1].textContent = 'About';
 
 const topContentP = document.querySelectorAll('.top-content > .text-content > p')
-topContentP[0].innerText = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
-topContentP[1].innerText = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+topContentP[0].textContent = 'Features content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
+topContentP[1].textContent = 'About content elementum magna eros, ac posuere elvit tempus et. Suspendisse vel tempus odio, in interdutm nisi. Suspendisse eu ornare nisl. Nullam convallis augue justo, at imperdiet metus scelerisque quis.';
 
 const bottomContentH4 = document.querySelectorAll('.bottom-content > .text-content > h4');
-bottomContentH4[0].innerText = 'Services';
+bottomContentH4[0].textContent = 'Services';
 bottomContentH4[1].innerText = 'Product';
 bottomContentH4[2].innerText = 'Vision';
 
@@ -117,3 +118,12 @@ contactP[2].innerText = 'sales@greatidea.io';
 
 const footerP = document.querySelectorAll('footer > p')
 footerP[0].innerText = 'Copyright Great Idea! 2018';
+
+
+//Button on click changes
+// const body = querySelectorAll('body')
+
+headerButton[0].addEventListener('click', function() {
+  document.body.style.backgroundColor = '#cc0000'
+}, false)
+
