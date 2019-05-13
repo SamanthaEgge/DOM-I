@@ -123,7 +123,17 @@ footerP[0].innerText = 'Copyright Great Idea! 2018';
 //Button on click changes
 // const body = querySelectorAll('body')
 
-headerButton[0].addEventListener('click', function() {
-  document.body.style.backgroundColor = '#cc0000'
-}, false)
+// headerButton[0].addEventListener('click', function() {
+//   const curColour = document.body.style.backgroundColor;
 
+//   document.body.style.backgroundColor = curColour === 'red' ? 'white' : 'red';
+// }, false)
+
+headerButton[0].addEventListener('click', function() {
+  const curColour = document.body.style.backgroundColor;
+  if (curColour === 'red') {
+    document.body.style.backgroundColor = 'white';
+  }
+  else {
+    document.body.style.backgroundColor = 'red';
+  }}, false)
